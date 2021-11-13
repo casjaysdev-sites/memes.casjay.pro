@@ -1,6 +1,6 @@
 <!-- Begin Footer -->
 <div class="footer-custom" align="center">
-  <br>
+  <br />
 
   <!-- Social Links -->
   {% if site.options.sharethis == true %}
@@ -19,11 +19,19 @@
   {% include casjaysdev/theme.html %}
   {% endif %}
   <!-- End theme Code -->
+
+  <!-- clock -->
+  {% if site.options.clock == true %}
+  {% include casjaysdev/clock.html %}
+  {% endif %}
+  <!-- End clock-->
+
   <!-- Begin last updated -->
   <span style="color: skyblue;">
     Last update on: {{ site.time | date: '%B %d, %Y at %H:%M' }}
   </span>
   <!-- End last updated -->
+
   <!--Begin Statcounter Code -->
   {% if site.options.statcounter == true %}
   {% include casjaysdev/statcounter.html %}

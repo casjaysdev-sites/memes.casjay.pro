@@ -43,31 +43,31 @@
       <div class="col-lg-6">{{ content }}</div>
       <div class="col-lg-3 float-none">
         {% include {{ site.custom_theme.nav.right }} %}
-    </div>
-  </div>
-
-  {% elsif site.custom_theme.columns == "3" %}
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-3 float-none">
-        {% include {{ site.custom_theme.nav.left }} %}
       </div>
-      <div class="col-lg-6">
-        {{ content }}
-      </div>
-      <div class="col-lg-3 float-none">
-        {% include {{ site.custom_theme.nav.right }} %}</div>
     </div>
-  </div>
+
+    {% elsif site.custom_theme.columns == "3" %}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 float-none">
+          {% include {{ site.custom_theme.nav.left }} %}
+        </div>
+        <div class="col-lg-6">
+          {{ content }}
+        </div>
+        <div class="col-lg-3 float-none">
+          {% include {{ site.custom_theme.nav.right }} %}</div>
+      </div>
+    </div>
 
 
-  {% else %}
-  <div class="container-fluid text-center align-middle col-md-6">
-    <h1 class="row">
-      custom_theme/columns not set in _config.yml <br>
-      Your theme settings in _config.yml are incorrect <br>
-      Current columns: {{ site.custom_theme.columns }}
-    </h1>
+    {% else %}
+    <div class="container-fluid text-center align-middle col-md-6">
+      <h1 class="row">
+        custom_theme/columns not set in _config.yml <br />
+        Your theme settings in _config.yml are incorrect <br />
+        Current columns: {{ site.custom_theme.columns }}
+      </h1>
+    </div>
+    {% endif %}
   </div>
-  {% endif %}
-</div>

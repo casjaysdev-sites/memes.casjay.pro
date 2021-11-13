@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: " en-US" }}">
 
 <head>
-
   {% include casjays-header.html %}
-
   {% if site.custom_theme.name %}
   {% include themes/{{ site.custom_theme.name }}/meta.html %}
   {% endif %}
-
 </head>
 
 <body onload="javascript:loadDomain();">
@@ -21,7 +18,8 @@
 
     {% if site.github.forkme == true %}
     <a class="github-fork-ribbon left-top" href="{{ site.github.repository_url }}/fork" data-ribbon="Fork me on GitHub"
-      title="Fork me on GitHub">Fork me on GitHub</a>
+      title="Fork me on GitHub">Fork me on GitHub
+    </a>
     {% endif %}
     <br />
     <br />
@@ -35,7 +33,6 @@
     <br />
     <br />
   </div>
-
 </body>
 
 </html>

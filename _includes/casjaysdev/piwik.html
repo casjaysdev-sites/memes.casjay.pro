@@ -1,17 +1,16 @@
 {% if site.piwik.url %}
-<script type="text/javascript">
-  var pkBaseURL = (("https:" == document.location.protocol) ? "{{ site.piwik.pre }}://{{ site.piwik.url }}/" :
-    "{{ site.piwik.pre }}://{{ site.piwik.url }}/");
-  document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function () {
+    var u = "//{{ site.piwik.url }}/";
+    _paq.push(['setTrackerUrl', u + 'matomo.php']);
+    _paq.push(['setSiteId', '{{ site.piwik.id }}']);
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+  })();
 </script>
-<script type="text/javascript">
-  try {
-    var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", {{ site.piwik.id }});
-  piwikTracker.trackPageView();
-  piwikTracker.enableLinkTracking();
-} catch (err) { }
-</script><noscript>
-  <p><img src="{{ site.piwik.url }}?idsite={{ site.piwik.id }}" class="c1" alt=""></p>
-</noscript>
 <br />
 {% endif %}
