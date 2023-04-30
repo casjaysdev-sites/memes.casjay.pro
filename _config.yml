@@ -44,7 +44,7 @@ form:
       message: "Message"
       required: "Name,Email,Message"
     theme:
-      background: "https://static.casjay.net/assets/images/bkg.png"
+      background: "https://casjaysdev-sites.github.io/static/assets/images/bkg.png"
       bgcolor: "#000000"
       text_color: "#ffffff"
       link_color: "#ffffff"
