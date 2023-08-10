@@ -21,7 +21,7 @@ baseurl: ""
 # set site author
 author:
   name: casjaysdev
-  url: http://casjay.net
+  url: http://casjay.pro
 
 # set url for the contact form
 form:
@@ -30,8 +30,8 @@ form:
     submit_url: "https://formspree.io/f"
     code: "xknqkpjo"
   formmail:
-    submit_url: "https://cgi.casjay.net/email.cgi"
-    recipient: "form-submission@casjay.net"
+    submit_url: "https://cgi.casjay.pro/email.cgi"
+    recipient: "form-submission@casjay.pro"
     subject: "jekyll-casjaysdev Contact Form"
     title: "jekyll-casjaysdev"
     env: "REMOTE_HOST,HTTP_USER_AGENT"
@@ -80,7 +80,7 @@ excerpt_separator: "\n\n"
 share-this:
   rss: true
   code: "5acc08103368f4001495b647"
-  repo: "https://github.com/casjaysdev-sites/memes.casjay.net"
+  repo: "https://github.com/casjaysdev-sites/memes.casjay.pro"
   email:
   enabled:
     footer: true
